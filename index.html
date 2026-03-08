@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Les listes des municipales 2026 - 1er tour</title>
+  <meta name="description" content="Carte interactive des municipales 2026">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  
+  <!-- ol-ext -->
+  <link rel="stylesheet" href="https://viglino.github.io/ol-ext/dist/ol-ext.css" />
+  <script type="text/javascript" src="https://viglino.github.io/ol-ext/dist/ol-ext.js"></script>
+
+   <!-- ol-mapbox-style -->
+  <script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style/dist/olms.js"></script>
+  
+  <!-- LayerSwitcher -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css">
+  <script src="https://cdn.jsdelivr.net/npm/ol-layerswitcher@4.1.1"></script>
+  
+  <!-- Chargement du fichier css associé--> 
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+ 
+<body>
+  <div id="titre"> Elections municipales 2026 - Listes candidates au 1er tour </div>
+  <div class="container">
+    <div class="sidebar">
+      <div id="info_presentation">
+      Pour connaître les listes du 1er tour des municipales 2026, sélectionnez une commune ou naviguer sur la carte :
+      </div>
+      
+      <label>
+      Commune :
+        <select id="selectCommune">
+          <option value="">-- Sélectionner --</option>
+        </select>
+        <div id="commune-info"></div>
+
+      </label>
+  </div>
+
+
+  <div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer">✖</a>
+  <div id="popup-content"></div>
+</div>
+
+
+
+  <!-- Carte OpenLayers -->
+ <div id="map"></div>
+</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>

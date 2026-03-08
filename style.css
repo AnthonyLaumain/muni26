@@ -1,0 +1,175 @@
+#popup {
+  position: absolute;
+  background-color: white;
+  border: 2px solid #c5050b;
+  border-radius: 6px;
+  padding: 12px;
+  min-width: 260px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+#popup-closer {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+#popup-closer:hover {
+  color: #c5050b;
+}
+
+.popup-title {
+  color: #c5050b;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+#popup ul {
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+#popup li {
+  margin-bottom: 4px;
+}
+
+
+/* Le body prend toute la page sans marges */
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100%;
+  font-family: Calibri, sans-serif;
+  font-size: 15px;
+}
+
+/* Titre en bandeau horizontal */
+#titre {
+  background-color: white;
+  border: 2px solid #c5050b;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 10px;
+  text-align: left;
+  border-radius: 1px;
+  margin: 0px;
+}
+
+/* Conteneur principal : deux colonnes */
+.container {
+  display: flex;
+  flex-direction: row;  /* sidebar à gauche, carte à droite */
+  height: calc(100vh - 53px); /* hauteur totale moins le titre + marges */
+}
+
+
+
+
+
+/* Panneau latéral gauche */
+.sidebar {
+  width: 20%;
+  background: #ffffff;
+  padding: 20px 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+/* Style des menus déroulants */
+.sidebar select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Espacement vertical dans la sidebar */
+.sidebar label {
+  display: flex;
+  flex-direction: column; /* pour empiler le texte et le select verticalement */
+  gap: 10px;              /* espace entre "Commune :" et le select + infos */
+  margin-top: 15px;       /* espace au-dessus du label */
+}
+
+/* Sélecteur */
+.sidebar select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  width: 100%;
+}
+
+/* Div des infos */
+#commune-info {
+  margin-top: 10px; /* espace entre le select et le début des infos */
+}
+
+#info {
+padding: 10px;
+padding-top: 0px;
+line-height: 1.4em;
+min-height: 40px;
+}
+
+#info_presentation{
+  padding-top: 10px;
+  line-height: 1.4em;
+}
+
+p {
+  margin-top: 0;     /* supprime la marge au-dessus */
+}
+
+.zonages-list {
+  list-style: none; /* supprime les puces */
+  padding-left: 0;
+}
+
+
+/* La carte occupe tout le reste */
+#map {
+  flex-grow: 1; /* prend tout l’espace restant */
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.ol-control button {
+  color: white;
+  font-weight: 700;
+  line-height: .4em;
+  background-color:   rgba(129, 129, 129, 0.3);
+}
+
+
+
+.ol-scale-line {
+  font-weight: bold;
+  top: auto;
+  right: auto;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(129, 129, 129, 0.3);
+}
+
+.ol-scale-line-inner {
+  color: white;
+  border-color: white;
+}
+
