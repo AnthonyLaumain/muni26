@@ -182,9 +182,9 @@ select.addEventListener('change', function() {
     }
 
     // sinon, générer les listes normalement
-    const noms = feature.get('nom').split(',');
-    const listes = feature.get('Libellé de la liste').split(',');
-    const nuances = feature.get('Nuance de liste').split(',');
+    const noms = feature.get('nom').split(';');
+    const listes = feature.get('Libellé de la liste').split(';');
+    const nuances = feature.get('Nuance de liste').split(';');
 
     let htmlList = '';
     for (let i = 0; i < noms.length; i++) {
@@ -295,9 +295,9 @@ map.on('singleclick', function(evt) {
         '<p><b>Aucune liste pour la commune</b></p>';
     } else {
       // Sinon, générer les listes normalement
-      const noms = feature.get('nom').split(',');
-      const listes = feature.get('Libellé de la liste').split(',');
-      const nuances = feature.get('Nuance de liste').split(',');
+      const noms = feature.get('nom').split(';');
+      const listes = feature.get('Libellé de la liste').split(';');
+      const nuances = feature.get('Nuance de liste').split(';');
 
       let htmlList = '';
       for (let i = 0; i < noms.length; i++) {
@@ -323,3 +323,4 @@ map.on('singleclick', function(evt) {
   }
 
 });
+
